@@ -1,0 +1,123 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Complaint Board</title>
+<meta name="keywords" content="" />
+<meta name="Cool Black" content="" />
+<link href="../default.css" rel="stylesheet" type="text/css" media="screen"
+/>
+<style type="text/css">
+.style2
+{
+font-size: large;
+}
+.style3
+{
+text-align: left;
+}
+.style4
+{
+width: 144%;
+height: 30px;
+border-style: solid;
+border-width: 1px;
+}
+</style>
+</head>
+<body>
+<form id="form1" runat="server">
+<!-- start header -->
+<div id="header">
+<div id="logo" class="style3">
+<h1><a href="#"><span>Complaint </span>Board</a></h1>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+class="style2">Welcome:<asp:Label ID="lbusrnam" runat="server"
+Text=""></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb
+sp;
+</span>
+<asp:LinkButton ID="lksgnout" runat="server" Font-Underline="True"
+CausesValidation="False" onclick="lksgnout_Click1"
+>Sign Out</asp:LinkButton>
+</div>
+</div>
+<div id="menu">
+<ul id="main">
+<asp:HyperLink ID="HyperLink1" runat="server"
+NavigateUrl="~/admin/frmara.aspx">Home</asp:HyperLink>
+<asp:HyperLink ID="HyperLink2" runat="server" >About
+Us</asp:HyperLink>
+</ul>
+</div>
+<!-- end header -->
+<div id="wrapper">
+<!-- start page -->
+<div id="page">
+<div id="sidebar1" class="sidebar">
+<ul>
+<li>
+<h2>NAVIGATIONS</h2>
+</li>
+<li>
+<ul>
+<asp:ContentPlaceHolder ID="ContentPlaceHolder2"
+runat="server">
+<P>
+<table border="1" style="height: 353px" >
+<tr>
+<td valign="top" >
+<asp:TreeView ID="TreeView1" runat="server"
+DataSourceID="SiteMapDataSource1"
+Height="195px" Width="232px">
+</asp:TreeView>
+</td>
+</tr>
+</table>
+</P>
+<P>
+<asp:SiteMapDataSource
+ID="SiteMapDataSource1" runat="server" />
+</P>
+</asp:ContentPlaceHolder>
+</ul>
+</li>
+</ul>
+</div>
+<!-- start content -->
+<div id="content">
+<div class="post">
+<h1 class="title"><a href="#">Welcome
+Administrator</a></h1>
+<br />
+<div class="entry">
+<asp:ContentPlaceHolder
+ID="ContentPlaceHolder1" runat="server">
+</asp:ContentPlaceHolder>
+</div>
+</div>
+</div><!-- end content -->
+<!-- start sidebars -->
+<div id="sidebar2" class="sidebar">
+<ul>
+<li>
+</li>
+</ul>
+</div>
+<!-- end sidebars -->
+<div style="clear: both;">&nbsp;</div>
+</div>
+<!-- end page -->
+</div>
+<div id="footer">
+<p class="copyright">&copy;&nbsp;&nbsp;2009 All Rights Reserved
+&nbsp;&bull;&nbsp; Design by Richa</a>.</p>
+</div>
+</form>
+</body>
+</html>
